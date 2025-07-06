@@ -1,8 +1,13 @@
-# 🔍 Anomaly Detection in Directed Energy Deposition (DED) Processes Using Thermal Images
+# Anomaly Detection in Directed Energy Deposition (DED) Processes Using Thermal Images
 
 **ENS 491-492 Graduation Project – Group #121**
 
-Berke Ayyıldızlı • Beyza Balota • Kerem Tatari  
+### 👥 Team Members
+
+- [Berke Ayyıldızlı](https://www.linkedin.com/in/berkeayyildizli/)
+- [Beyza Balota](https://www.linkedin.com/in/beyza-balota/)  <!-- Replace with actual URL if different -->
+- [Kerem Tatari](https://www.linkedin.com/in/kerem-tatari/)  <!-- Replace with actual URL if different -->
+
 Supervisors: Mustafa Ünel, Shawqi Mohammed Farea  
 Sabancı University – 2025
 
@@ -20,23 +25,23 @@ We applied and compared **supervised**, **semi-supervised**, and **unsupervised*
 
 ```bash
 ├── models/
-│   ├── random_forest.py
-│   ├── xgboost_model.py
-│   ├── cnn_model.py
-│   ├── oneclass_svm.py
-│   ├── isolation_forest.py
-│   ├── autoencoder.py
+│   ├── random_forest.ipynb
+│   ├── xgboost_model.ipynb
+│   ├── cnn_model.ipynb
+│   ├── oneclass_svm.ipynb
+│   ├── isolation_forest.ipynb
+│   ├── autoencoder.ipynb
 │   └── dbscan.py
 ├── preprocessing/
-│   ├── clean_data.py
-│   ├── extract_features.py
-│   └── smote_balancing.py
-├── results/
-│   ├── confusion_matrices.png
-│   ├── feature_importance.png
-│   └── metrics_summary.csv
+│   ├── eda.ipynb
+│   ├── excel_converter.ipynb
+│   ├── feature_extraction.ipynb
+│   ├── renamer.ipynb
+│   ├── row_Column_Remover.ipynb
+│   └── thermal_geometric_feature_extraction.ipynb
 ├── docs/
 │   └── ENS_492_Final_Report_Group_121.pdf
+│   ├── DED_anomaly_detection_conference_paper2_v1.pdf
 ├── requirements.txt
 └── README.md
 ```
@@ -48,7 +53,7 @@ We applied and compared **supervised**, **semi-supervised**, and **unsupervised*
 - **Source**: [Harvard Dataverse – Thermal-Porosity Characterization Dataset](https://doi.org/10.7910/DVN/BWHYEH)
 - **Material**: Ti–6Al–4V thin-walled structures
 - **Process**: Laser Engineered Net Shaping (LENS)
-- **Size**: Thousands of labeled thermal frames  
+- **Size**: 1564 Thermal Frames 
 - **Defect Rate**: ~4.5% defective (highly imbalanced)
 
 ---
@@ -109,6 +114,7 @@ We applied and compared **supervised**, **semi-supervised**, and **unsupervised*
 - 📉 Feature importance heatmaps (Random Forest, XGBoost)
 - 📊 Confusion matrices for all models
 - 🔍 Correlation matrix of statistical features
+- Can be further seen on the final report
 
 ---
 
@@ -135,15 +141,6 @@ pip install -r requirements.txt
 python preprocessing/extract_features.py
 python models/random_forest.py
 ```
-
----
-
-## 👥 Authors
-
-- **Berke Ayyıldızlı** – Model Training, Feature Engineering  
-- **Beyza Balota** – CNN Development, Visualization  
-- **Kerem Tatari** – Unsupervised Models, Preprocessing
-
 ---
 
 ## 📄 License
